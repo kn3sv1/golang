@@ -1,0 +1,32 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Simple Shell")
+	fmt.Println("---------------------")
+
+	for {
+		fmt.Print("-> ")
+		text, _ := reader.ReadString('\n')
+		// convert CRLF to LF
+		text = strings.Replace(text, "\r\n", "", -1)
+
+		if strings.Compare("hi", text) == 0 {
+			fmt.Println("hello, Yourself")
+		}
+
+	}
+
+}
+
+// https://tutorialedge.net/golang/reading-console-input-golang/
+
+// go run cmd2.go
