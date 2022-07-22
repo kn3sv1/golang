@@ -1,4 +1,4 @@
-module go-template
+module mysql
 
 go 1.18
 
